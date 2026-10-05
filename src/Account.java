@@ -16,4 +16,11 @@ public class Account {
     public void deposit(double amount) {
         balance += amount;
     }
+    public void withdraw(double amount) {
+        if (amount > balance) {
+            System.out.println("Otillräckligt saldo");
+        } else {
+            balance -= amount;
+        }
+    }
 }
