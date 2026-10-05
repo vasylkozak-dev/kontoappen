@@ -10,6 +10,17 @@ public class AccountRegister {
         accounts.add(account);
     }
 
+    public Account findAccount(String name) {
+        for (int i = 0; i < accounts.size(); i++) {
+            Account candidateAccount = accounts.get(i);
+
+            if (candidateAccount.getName().equalsIgnoreCase(name)) {
+                return candidateAccount;
+            }
+
+        }
+        return null;
+    }
 
 
 
