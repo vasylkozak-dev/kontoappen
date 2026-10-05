@@ -22,7 +22,12 @@ public class AccountRegister {
         return null;
     }
 
-
-
+    public void printAllAccounts() {
+        System.out.println("Alla konton: ");
+        for (int i = 0; i < accounts.size(); i++) {
+            Account currentAccount = accounts.get(i);
+            System.out.println("Konto: " + currentAccount.getName() + " | Saldo: " + currentAccount.getBalance());
+        }
+    }
 
 }
