@@ -23,10 +23,16 @@ public class AccountRegister {
     }
 
     public void printAllAccounts() {
+        if (accounts.isEmpty()) {
+            System.out.println("Konton saknas");
+            return;
+        }
         System.out.println("Alla konton: ");
+
         for (int i = 0; i < accounts.size(); i++) {
             Account currentAccount = accounts.get(i);
-            System.out.println("Konto: " + currentAccount.getName() + " | Saldo: " + currentAccount.getBalance());
+            System.out.println("Konto: " + currentAccount.getName() +
+                    " | Saldo: " + currentAccount.getBalance());
         }
     }
 
