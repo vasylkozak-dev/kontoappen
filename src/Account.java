@@ -14,13 +14,21 @@ public class Account {
         return balance;
     }
     public void deposit(double amount) {
-        balance += amount;
+        if (amount <= 0) {
+            System.out.println("Beloppet måste vara större än 0");
+        } else {
+            balance = balance + amount;
+            System.out.println("Insättning lyckades. Saldo: " + balance);
+        }
     }
     public void withdraw(double amount) {
-        if (amount > balance) {
+        if (amount <= 0) {
+            System.out.println("Beloppet måste vara större än 0");
+        } else if (amount > balance) {
             System.out.println("Otillräckligt saldo");
         } else {
-            balance -= amount;
+            balance = balance - amount;
+            System.out.println("Uttaget lyckades. Saldo: " + balance);
         }
     }
 }

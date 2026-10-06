@@ -24,14 +24,12 @@ public class Main {
                 System.out.println("Namn: ");
                 String name = scanner.nextLine();
                 System.out.println("Startsaldo: ");
-                double balance = scanner.nextInt();
+                double balance = scanner.nextDouble();
                 scanner.nextLine();
                 register.newAccount(name, balance);
                         System.out.println("Kontot skapat");
             } else if (choice == 2) {
                 register.printAllAccounts();
-                choice = scanner.nextInt();
-                scanner.nextLine();
             } else if (choice == 3) {
                 System.out.println("Namn: ");
                 String name = scanner.nextLine();
@@ -45,9 +43,6 @@ public class Main {
                         System.out.println("Ange belopp: ");
                         double amount = scanner.nextInt();
                         found.deposit(amount);
-                        System.out.println("Insättning lyckades. Saldo: " + found.getBalance());
-                        choice = scanner.nextInt();
-                        scanner.nextLine();
             } else if (choice == 4) {
                 System.out.println("Namn: ");
                 String name = scanner.nextLine();
@@ -58,13 +53,10 @@ public class Main {
                         found = register.findAccount(name);
                     }
                         System.out.println("Ange belopp för uttag: ");
-                        double amount = scanner.nextInt();
+                        double amount = scanner.nextDouble();
                         found.withdraw(amount);
-                        System.out.println("Uttaget lyckades. Saldo: " + found.getBalance());
-                        choice = scanner.nextInt();
-                        scanner.nextLine();
             } else if (choice == 5) {
-                System.out.println("Hej då");
+                System.out.println("Hej då!");
             } else {
                 System.out.println("Ogiltigt val. Välj en siffra från menyn");
             }
