@@ -1,9 +1,9 @@
 public class Account {
 
     private String name;
-    private double balance;
+    private int balance;
 
-    public Account(String name, double balance) {
+    public Account(String name, int balance) {
         this.name = name;
 
         if (balance < 0) {
@@ -16,10 +16,10 @@ public class Account {
     public String getName() {
         return name;
     }
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
-    public void deposit(double amount) {
+    public void deposit(int amount) {
         if (amount <= 0) {
             System.out.println("Beloppet måste vara större än 0");
         } else {
@@ -27,7 +27,7 @@ public class Account {
             System.out.println("Insättning lyckades. Saldo: " + balance);
         }
     }
-    public void withdraw(double amount) {
+    public void withdraw(int amount) {
         if (amount <= 0) {
             System.out.println("Beloppet måste vara större än 0");
         } else if (amount > balance) {

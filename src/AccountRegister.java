@@ -5,7 +5,7 @@ public class AccountRegister {
 
     private List<Account> accounts = new ArrayList<>();
 
-    public void newAccount(String name, double balance) {
+    public void newAccount(String name, int balance) {
         Account account = new Account(name, balance);
         accounts.add(account);
     }
