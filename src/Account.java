@@ -5,7 +5,13 @@ public class Account {
 
     public Account(String name, double balance) {
         this.name = name;
-        this.balance = balance;
+
+        if (balance < 0) {
+            this.balance = 0;
+            System.out.println("Negativt startsaldo är inte tillåtet. Saldo sätts till 0.");
+        } else {
+            this.balance = balance;
+        }
     }
     public String getName() {
         return name;

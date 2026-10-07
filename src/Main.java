@@ -8,6 +8,8 @@ public class Main {
 
         int choice = 0;
 
+
+
         System.out.println("=== Kontoappen ===");
 
         while (choice != 5) {
@@ -26,6 +28,12 @@ public class Main {
                 System.out.println("Startsaldo: ");
                 double balance = scanner.nextDouble();
                 scanner.nextLine();
+
+                while (balance < 0) {
+                    System.out.println("Saldo kan inte vara negativt. Försök igen: ");
+                    balance = scanner.nextDouble();
+                    scanner.nextLine();
+                }
                 register.newAccount(name, balance);
                         System.out.println("Kontot skapat");
             } else if (choice == 2) {
@@ -41,7 +49,7 @@ public class Main {
 
                     }
                         System.out.println("Ange belopp: ");
-                        double amount = scanner.nextInt();
+                        double amount = scanner.nextDouble();
                         found.deposit(amount);
             } else if (choice == 4) {
                 System.out.println("Namn: ");
@@ -62,5 +70,6 @@ public class Main {
             }
 
             }
+
         }
 }
