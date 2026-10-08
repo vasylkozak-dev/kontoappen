@@ -1,6 +1,6 @@
 # Kontoappen
 
-En enkel konsolapplikation i Java.
+En enkel konsolapplikation i Java. [Muntlig redovisning.](https://funet-my.sharepoint.com/:v:/g/personal/3kdyhapp26_kozava_folkuniversitetet_nu/IQD4vjO2PBj7S6XAiVXHFyf-ASxK6tVD-yEPmbwAGopYWtM?e=8hagFD)
 
 ## 1. Datasäkerhet / Inkapsling
 
