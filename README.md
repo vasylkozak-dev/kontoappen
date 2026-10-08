@@ -19,4 +19,4 @@ Inmatningen kontrolleras först så att den är ett heltal och sedan kontrollera
 
 ## 4. Reflektion
 
-Tänker
+När jag arbetade med felaktig inmatning märkte jag att vanliga `if` och `while` villkor inte räckte när användaren skrev fel typ av värde, till exempel text där programmet väntade sig ett heltal. Med hjälp av ChatGPT lärde jag mig hur `hasNextInt()` kan användas för att kontrollera inmatningen innan den läses in och hur `isBlank()` kan användas för att kontrollera tomma namn. Efter det insåg jag att samma kontroll annars skulle behöva upprepas på flera ställen, så jag skapade två egna metoder i Main för validerad inmatning av heltal och namn och återanvände dem i programmet.
